@@ -32,10 +32,24 @@ gulp.task('js-build', function() {
   gulp.src(plugins.modules)
     .pipe(concat('mdb.js'))
     .pipe(gulp.dest('./dist/js/'))
+
+  gulp.src('js/custom.js')
+    .pipe(concat('custom.js'))
+    .pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('js-minify', function() {
   gulp.src('./dist/js/mdb.js')
+    .pipe(minify({
+      ext:{
+        // src:'.js',
+        min:'.min.js'
+      },
+      noSource: true,
+    }))
+    .pipe(gulp.dest('./dist/js'));
+
+  gulp.src('./dist/js/custom.js')
     .pipe(minify({
       ext:{
         // src:'.js',
