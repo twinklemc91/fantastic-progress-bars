@@ -12,6 +12,7 @@ const babelify     = require('babelify');
 const browserify   = require('browserify');
 const source       = require('vinyl-source-stream');
 const es2015       = require('babel-preset-es2015');
+const deploy       = require('gulp-gh-pages');
 
 // CSS Tasks
 gulp.task('css-compile', function() {
@@ -86,6 +87,12 @@ gulp.task('live-server', function() {
   });
 
   gulp.watch("**/*", {cwd: './dist/'}, browserSync.reload);
+});
+
+// Push build to gh-pages
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+             .pipe(deploy());
 });
 
 // Watch on everything
