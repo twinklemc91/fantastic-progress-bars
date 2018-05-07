@@ -1,4 +1,4 @@
-const URL_BARSDATA = `http://pb-api.herokuapp.com/bars`;
+const URL_BARSDATA = `https://pb-api.herokuapp.com/bars`;
 
 document.addEventListener('DOMContentLoaded', () => {
 	var barsData   = null;
