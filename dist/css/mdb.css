@@ -6545,7 +6545,8 @@ body {
   background-color: white; }
 
 .container {
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
 
 .clearfix {
   clear: both;
@@ -6553,7 +6554,7 @@ body {
 
 .progress {
   height: 20px;
-  width: 75vh;
+  width: 100%;
   margin-bottom: 10px; }
   .progress .progress-bar {
     height: 20px;
@@ -6562,9 +6563,13 @@ body {
     transition: width 0.5s; }
 
 .mdb-select {
-  background: none;
   border: none;
-  margin: 15px; }
+  margin: 5px;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -webkit-appearance: initial;
+  padding: 6px; }
 
 #contents-btn {
   display: -webkit-inline-box;

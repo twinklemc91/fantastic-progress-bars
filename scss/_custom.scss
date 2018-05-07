@@ -6,12 +6,12 @@ body {
 	background-color: $primary-background-color;
 }
 
-.container { height: 100vh; }
+.container { height: 100vh; text-align: center; }
 .clearfix { clear: both; height: 25px; }
 
 .progress { 
 	height: 20px;
-	width: 75vh;
+	width: 100%;
 	margin-bottom: 10px;
 
 	.progress-bar {  
@@ -20,8 +20,12 @@ body {
 		transition: width 0.5s; }}
 
 .mdb-select { 
-	background: none;
 	border: none;
-	margin: 15px; }
+	margin: 5px; 
+	border-radius: inherit; 
+	-webkit-border-radius: inherit;
+	-moz-border-radius: inherit;
+	-webkit-appearance: initial;
+	padding: 6px; }
 
 #contents-btn { display: inline-flex; }
