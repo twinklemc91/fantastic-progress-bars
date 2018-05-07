@@ -7,5 +7,6 @@
     "indent": ["error", 2],
     "camelcase": "off",
     "brace-style": 2
-  }
+  },
+  "parser": "babel-eslint"
 }

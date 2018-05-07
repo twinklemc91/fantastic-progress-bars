@@ -18,52 +18,28 @@
 
 <body>
     <!-- Start your project here-->
-    <div class="container">
-        <div class="flex-center flex-column">
-            <h1 class="animated fadeIn mb-4">Progress Bars Demo</h1>
-
-            <h5 class="animated fadeIn mb-3">Powered by Bootstrap Material Design</h5>
-
-            <p class="animated fadeIn text-muted">Twinkle Capote</p>
-
-            <div class="clearfix">&nbsp;</div>
-
-            <div class="progress animated fadeIn">
-                <div id="progressbar1" class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-            </div>
-
-            <div class="progress animated fadeIn">
-                <div id="progressbar2" class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-            </div>
-
-            <div class="progress animated fadeIn">
-                <div id="progressbar3" class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+    <div class="container flex-center flex-column">
+        <!-- Header -->
+        <h1 class="animated fadeIn mb-4">Progress Bars Demo</h1>
+        <h5 class="animated fadeIn mb-3">Powered by Bootstrap Material Design</h5>
+        <p class="animated fadeIn text-muted">Twinkle Capote</p>
+        <div class="clearfix">&nbsp;</div>
+            
+        <!-- Content start here -->
+        <div id="contents">
+            <div id="contents-bars">
             </div>
 
             <div class="clearfix">&nbsp;</div>
 
             <div class="flex-row">
-                <!--Dropdown primary-->
-                <div class="dropdown">
-
-                    <!--Trigger-->
-                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="dropdown-progress-" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Progress Bar...</button>
-
-                    <!--Menu-->
-                    <div class="dropdown-menu dropdown-primary">
-                        <a class="dropdown-item" href="#">Progress Bar 1</a>
-                        <a class="dropdown-item" href="#">Progress Bar 2</a>
-                        <a class="dropdown-item" href="#">Progress Bar 3</a>
-                    </div>
+                <select id="select-progressbar" class="mdb-select dropdown-primary">
+                </select>
+                
+                <div id="contents-btn">
                 </div>
-                <!--/Dropdown primary-->
-
-                <button type="button" class="btn btn-default btn-sm">-25</button>
-                <button type="button" class="btn btn-default btn-sm">-10</button>
-                <button type="button" class="btn btn-default btn-sm">+10</button>
-                <button type="button" class="btn btn-default btn-sm">+25</button>
             </div>
-        </div>
+        </div><!-- End of contents-->
     </div>
     <!-- /Start your project here-->
 

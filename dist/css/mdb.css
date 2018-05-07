@@ -6543,3 +6543,31 @@ table.table-sm td {
 body {
   font-size: 12px;
   background-color: white; }
+
+.container {
+  height: 100vh; }
+
+.clearfix {
+  clear: both;
+  height: 25px; }
+
+.progress {
+  height: 20px;
+  width: 75vh;
+  margin-bottom: 10px; }
+  .progress .progress-bar {
+    height: 20px;
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s; }
+
+.mdb-select {
+  background: none;
+  border: none;
+  margin: 15px; }
+
+#contents-btn {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }

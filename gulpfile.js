@@ -8,6 +8,10 @@ const concat       = require('gulp-concat');
 const minify       = require('gulp-minify');
 const rename       = require('gulp-rename');
 const imagemin     = require('gulp-imagemin');
+const babelify     = require('babelify');
+const browserify   = require('browserify');
+const source       = require('vinyl-source-stream');
+const es2015       = require('babel-preset-es2015');
 
 // CSS Tasks
 gulp.task('css-compile', function() {
@@ -33,23 +37,16 @@ gulp.task('js-build', function() {
     .pipe(concat('mdb.js'))
     .pipe(gulp.dest('./dist/js/'))
 
-  gulp.src('js/custom.js')
-    .pipe(concat('custom.js'))
-    .pipe(gulp.dest('./dist/js/'))
+  // Convert ES6 scripts into ES5 for older browsers and minify
+  browserify('js/custom.js')
+    .transform(babelify.configure({presets:['es2015']}))
+    .bundle()
+    .pipe(source('custom.min.js'))
+    .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('js-minify', function() {
   gulp.src('./dist/js/mdb.js')
-    .pipe(minify({
-      ext:{
-        // src:'.js',
-        min:'.min.js'
-      },
-      noSource: true,
-    }))
-    .pipe(gulp.dest('./dist/js'));
-
-  gulp.src('./dist/js/custom.js')
     .pipe(minify({
       ext:{
         // src:'.js',

@@ -19,4 +19,9 @@ body {
 		-webkit-transition: width 0.5s;
 		transition: width 0.5s; }}
 
-.dropdown { display: inline-flex; }
+.mdb-select { 
+	background: none;
+	border: none;
+	margin: 15px; }
+
+#contents-btn { display: inline-flex; }
